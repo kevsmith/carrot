@@ -1,0 +1,4 @@
+{'*', [{outdir, '../ebin'},
+       {i, "include/"},
+       {pz, "../ebin"},
+       debug_info]}.

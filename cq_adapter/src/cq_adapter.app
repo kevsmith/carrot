@@ -1,0 +1,11 @@
+{application, cq_adapter,
+ [{description, "External adapter for RabbitMQ management tasks"},
+  {vsn, "1.6.0"},
+  {modules, [cq_users_adapter,
+             cq_adapter_sup,
+             cq_adapter_app]},
+  {registered, [cq_users_adapter,
+                cq_adapter_sup]},
+  {env, []},
+  {mod, {cq_adapter_app, []}},
+  {applications, [kernel, stdlib, rabbit]}]}.

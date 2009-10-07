@@ -1,0 +1,7 @@
+header <- "Digest " pairs;
+pairs <- head:pair tail:("," ws* pair)*;
+pair <- key '=' (quoted_value / value);
+key <- [A-Za-z]+;
+value <- (!ws !',' .)+;
+quoted_value <- '"' value:((!'"' .)*) '"';
+ws <- [ \t\n\r];
